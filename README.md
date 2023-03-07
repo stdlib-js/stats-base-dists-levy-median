@@ -32,10 +32,14 @@ The [median][median] for a [Lévy][levy-distribution] random variable with locat
 
 <!-- <equation class="equation" label="eq:levy_expectation" align="center" raw="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" alt="Mode for a Lévy distribution."> -->
 
-<div class="equation" align="center" data-raw-text="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" data-equation="eq:levy_expectation">
+```math
+\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" data-equation="eq:levy_expectation">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@51534079fef45e990850102147e8945fb023d1d0/lib/node_modules/@stdlib/stats/base/dists/levy/median/docs/img/equation_levy_expectation.svg" alt="Mode for a Lévy distribution.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -216,7 +220,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
