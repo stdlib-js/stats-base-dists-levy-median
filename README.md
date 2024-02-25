@@ -67,7 +67,7 @@ The [median][median] for a [Lévy][levy-distribution] random variable with locat
 ## Usage
 
 ```javascript
-import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@esm/index.mjs';
+import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@v0.2.1-esm/index.mjs';
 ```
 
 #### median( mu, c )
@@ -132,7 +132,7 @@ y = median( 0.0, -1.0 );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@esm/index.mjs';
+import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@v0.2.1-esm/index.mjs';
 
 var mu;
 var c;
