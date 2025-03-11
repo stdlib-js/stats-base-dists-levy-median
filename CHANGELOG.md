@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-06)
+## Unreleased (2025-03-11)
 
 <section class="features">
 
@@ -20,9 +20,9 @@
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#3727](https://github.com/stdlib-js/stdlib/issues/3727)
+[#3727](https://github.com/stdlib-js/stdlib/issues/3727), [#5893](https://github.com/stdlib-js/stdlib/issues/5893)
 
 </section>
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`4748a5a`](https://github.com/stdlib-js/stdlib/commit/4748a5a2ba84c637c10515c018a9f5162f42c8ee) - **chore(sincosd):** address commit comments [(#5955)](https://github.com/stdlib-js/stdlib/pull/5955) _(by Jaison D Souza)_
 -   [`b790b70`](https://github.com/stdlib-js/stdlib/commit/b790b70f71820f266db46156d3dfef2443d33920) - **feat:** add C implementation for `stats/base/dists/levy/median` [(#4076)](https://github.com/stdlib-js/stdlib/pull/4076) _(by Vivek Maurya, Philipp Burckhardt, stdlib-bot)_
 -   [`4a70790`](https://github.com/stdlib-js/stdlib/commit/4a707903dfef7c2b56216000165706497d19a251) - **style:** add missing spaces _(by Philipp Burckhardt)_
 
@@ -47,8 +48,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Jaison D Souza
 -   Philipp Burckhardt
 -   Vivek Maurya
 
