@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-11)
+## Unreleased (2026-01-19)
 
 <section class="features">
 
@@ -34,7 +34,10 @@ A total of 2 issues were closed in this release:
 
 <details>
 
--   [`4748a5a`](https://github.com/stdlib-js/stdlib/commit/4748a5a2ba84c637c10515c018a9f5162f42c8ee) - **chore(sincosd):** address commit comments [(#5955)](https://github.com/stdlib-js/stdlib/pull/5955) _(by Jaison D Souza)_
+-   [`99d1d40`](https://github.com/stdlib-js/stdlib/commit/99d1d40243aee2ea033af6eb4cc168841755a62e) - **test:** remove duplicate test cases in `stats/base/dists/levy` packages _(by Philipp Burckhardt)_
+-   [`9c21fd2`](https://github.com/stdlib-js/stdlib/commit/9c21fd20ef8b8a6a88abb96d80ea6d8e4c5434eb) - **test:** use .strictEqual() instead of .equal() _(by Philipp Burckhardt)_
+-   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
+-   [`4748a5a`](https://github.com/stdlib-js/stdlib/commit/4748a5a2ba84c637c10515c018a9f5162f42c8ee) - **chore(sincosd):** address commit comments [(#5955)](https://github.com/stdlib-js/stdlib/pull/5955) _(by Jaison Dsouza)_
 -   [`b790b70`](https://github.com/stdlib-js/stdlib/commit/b790b70f71820f266db46156d3dfef2443d33920) - **feat:** add C implementation for `stats/base/dists/levy/median` [(#4076)](https://github.com/stdlib-js/stdlib/pull/4076) _(by Vivek Maurya, Philipp Burckhardt, stdlib-bot)_
 -   [`4a70790`](https://github.com/stdlib-js/stdlib/commit/4a707903dfef7c2b56216000165706497d19a251) - **style:** add missing spaces _(by Philipp Burckhardt)_
 
@@ -48,9 +51,10 @@ A total of 2 issues were closed in this release:
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
--   Jaison D Souza
+-   Jaison Dsouza
+-   Karan Anand
 -   Philipp Burckhardt
 -   Vivek Maurya
 
