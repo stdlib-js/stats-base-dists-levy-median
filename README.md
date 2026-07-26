@@ -41,14 +41,14 @@ limitations under the License.
 
 The [median][median] for a [Lévy][levy-distribution] random variable with location `μ` and scale `c > 0` is
 
-<!-- <equation class="equation" label="eq:levy_expectation" align="center" raw="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" alt="Mode for a Lévy distribution."> -->
+<!-- <equation class="equation" label="eq:levy_median" align="center" raw="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" alt="Median for a Lévy distribution."> -->
 
 ```math
 \mathop{\mathrm{Median}}\left( X \right) = \mu + \frac{c}{2(\mathop{\mathrm{erfcinv}}(1/2))^2}
 ```
 
-<!-- <div class="equation" align="center" data-raw-text="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" data-equation="eq:levy_expectation">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@51534079fef45e990850102147e8945fb023d1d0/lib/node_modules/@stdlib/stats/base/dists/levy/median/docs/img/equation_levy_expectation.svg" alt="Mode for a Lévy distribution.">
+<!-- <div class="equation" align="center" data-raw-text="\operatorname{Median}\left( X \right) = \mu + \frac{c}{2(\operatorname{erfcinv}(1/2))^2}" data-equation="eq:levy_median">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@2cee50a75da1437551b91682b8785dbae8ab897f/lib/node_modules/@stdlib/stats/base/dists/levy/median/docs/img/equation_levy_median.svg" alt="Median for a Lévy distribution.">
     <br>
 </div> -->
 
@@ -60,14 +60,32 @@ The [median][median] for a [Lévy][levy-distribution] random variable with locat
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-levy-median
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@esm/index.mjs';
+var median = require( '@stdlib/stats-base-dists-levy-median' );
 ```
 
 #### median( mu, c )
@@ -125,14 +143,9 @@ y = median( 0.0, -1.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import median from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-levy-median@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var median = require( '@stdlib/stats-base-dists-levy-median' );
 
 var mu;
 var c;
@@ -143,12 +156,8 @@ for ( i = 0; i < 10; i++ ) {
     mu = ( randu()*10.0 ) - 5.0;
     c = randu() * 20.0;
     y = median( mu, c );
-    console.log( 'µ: %d, c: %d, Median(X;µ,c): %d', mu.toFixed( 4 ), c.toFixed( 4 ), y.toFixed( 4 ) );
+    console.log( 'μ: %d, c: %d, Median(X;μ,c): %d', mu.toFixed( 4 ), c.toFixed( 4 ), y.toFixed( 4 ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -157,7 +166,98 @@ for ( i = 0; i < 10; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/levy/median.h"
+```
+
+#### stdlib_base_dists_levy_median( mu, c )
+
+Returns the [median][median] for a [Lévy][levy-distribution] distribution with location parameter `mu` and scale parameter `c`.
+
+```c
+double out = stdlib_base_dists_levy_median( 0.0, 1.0 );
+// returns ~2.198
+```
+
+The function accepts the following arguments:
+
+-   **mu**: `[in] double` location parameter.
+-   **c**: `[in] double` scale parameter.
+
+```c
+double stdlib_base_dists_levy_median( const double mu, const double c );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/levy/median.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    double mu;
+    double c;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        mu = random_uniform( -5.0, 5.0 );
+        c = random_uniform( 0.0, 20.0 );
+        y = stdlib_base_dists_levy_median( mu, c );
+        printf( "μ: %lf, c: %lf, Median(X;μ,c): %lf\n", mu, c, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -184,7 +284,7 @@ for ( i = 0; i < 10; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
